@@ -7,21 +7,47 @@
 //
 
 #import "ViewController.h"
+#import "Superhero.h"
 
-@interface ViewController ()
-
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic) NSArray *tableDataArray;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [Superhero retreiveSuperheroesWithCompletion:^(NSArray *heroes) {
+        self.tableDataArray = heroes;
+        [self.tableView reloadData];
+    }];
+   
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//- (void)setTableDataArray:(NSArray *)tableDataArray {
+//    _tableDataArray = tableDataArray;
+//    [self.tableView reloadData];
+//}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.tableDataArray.count;
 }
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SuperheroesID"];
+    Superhero *superhero = [self.tableDataArray objectAtIndex:indexPath.row];
+    [superhero getImageDataWithCompletion:^(NSData *imageData, NSError *error) {
+        cell.imageView.image = [UIImage imageWithData:imageData];
+        [cell layoutSubviews];
+    }];
+    cell.textLabel.text = superhero.name;
+    cell.detailTextLabel.text = superhero.itemDescription;
+//    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
+
+    return cell;
+}
+
+
 
 @end

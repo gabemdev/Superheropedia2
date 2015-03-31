@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DB2D9DA1AC9A4BE00BA14AA /* Superhero.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB2D9D91AC9A4BE00BA14AA /* Superhero.m */; };
 		985326E91AB8B4AC0009DEA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 985326E81AB8B4AC0009DEA1 /* main.m */; };
 		985326EC1AB8B4AC0009DEA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 985326EB1AB8B4AC0009DEA1 /* AppDelegate.m */; };
 		985326EF1AB8B4AC0009DEA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 985326EE1AB8B4AC0009DEA1 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6DB2D9D81AC9A4BE00BA14AA /* Superhero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Superhero.h; sourceTree = "<group>"; };
+		6DB2D9D91AC9A4BE00BA14AA /* Superhero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Superhero.m; sourceTree = "<group>"; };
 		985326E31AB8B4AC0009DEA1 /* Superheropedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Superheropedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985326E71AB8B4AC0009DEA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		985326E81AB8B4AC0009DEA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				985326F31AB8B4AC0009DEA1 /* Images.xcassets */,
 				985326F51AB8B4AC0009DEA1 /* LaunchScreen.xib */,
 				985326E61AB8B4AC0009DEA1 /* Supporting Files */,
+				6DB2D9D81AC9A4BE00BA14AA /* Superhero.h */,
+				6DB2D9D91AC9A4BE00BA14AA /* Superhero.m */,
 			);
 			path = Superheropedia;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				985326EF1AB8B4AC0009DEA1 /* ViewController.m in Sources */,
 				985326EC1AB8B4AC0009DEA1 /* AppDelegate.m in Sources */,
 				985326E91AB8B4AC0009DEA1 /* main.m in Sources */,
+				6DB2D9DA1AC9A4BE00BA14AA /* Superhero.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +418,7 @@
 				985327081AB8B4AC0009DEA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		985327091AB8B4AC0009DEA1 /* Build configuration list for PBXNativeTarget "SuperheropediaTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				9853270B1AB8B4AC0009DEA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
